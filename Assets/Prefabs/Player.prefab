@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 1116276947077523442}
   - component: {fileID: 4418193393806233221}
   - component: {fileID: 5417643620601500747}
-  - component: {fileID: 5316900660844954611}
+  - component: {fileID: 6505071051835215546}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -105,7 +105,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2484788835883483345}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -156,11 +156,11 @@ CapsuleCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 1
+  m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4418193393806233221
@@ -187,7 +187,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &5417643620601500747
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 3115087544176512031}
-  fov: 60
+  fov: 100
   invertCamera: 0
   cameraCanMove: 1
   mouseSensitivity: 2
@@ -226,7 +226,7 @@ MonoBehaviour:
   sprintSpeed: 7
   sprintDuration: 5
   sprintCooldown: 0.5
-  sprintFOV: 80
+  sprintFOV: 100
   sprintFOVStepTime: 10
   useSprintBar: 1
   hideBarWhenFull: 1
@@ -236,7 +236,7 @@ MonoBehaviour:
   sprintBarHeightPercent: 0.02
   enableJump: 1
   jumpKey: 32
-  jumpPower: 5
+  jumpPower: 7
   enableCrouch: 1
   holdToCrouch: 1
   crouchKey: 306
@@ -246,7 +246,7 @@ MonoBehaviour:
   joint: {fileID: 374021972761426081}
   bobSpeed: 10
   bobAmount: {x: 0, y: 0.1, z: 0}
---- !u!114 &5316900660844954611
+--- !u!114 &6505071051835215546
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,10 +255,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2484788835883483345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c95c1f50425680d4d8a82d42bf1211de, type: 3}
+  m_Script: {fileID: 11500000, guid: 256d4180559368f46a6de84444d33651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponManager: {fileID: 0}
+  maxHits: 5
 --- !u!1 &2894539822269457151
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,7 +422,7 @@ Transform:
   m_GameObject: {fileID: 4621706182648562775}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.67, y: 0.724, z: 1.71}
+  m_LocalPosition: {x: 1.67, y: 0.51, z: 1.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -597,7 +597,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7766581567387572955}
-  - component: {fileID: 6080574049916568629}
   m_Layer: 0
   m_Name: PlayerControl
   m_TagString: Player
@@ -620,19 +619,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7672768827008433265}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6080574049916568629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7958870487698070586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c95c1f50425680d4d8a82d42bf1211de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponManager: {fileID: 0}
 --- !u!1 &8573283389404389256
 GameObject:
   m_ObjectHideFlags: 0

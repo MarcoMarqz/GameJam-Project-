@@ -1,4 +1,5 @@
 # GameJam-Project-
+
 # Project Name
 MSCH-C220 Game Jam, April 2025
 
@@ -18,4 +19,4 @@ Weapon assets and Enemy Assets (for visuals)
 ## Future Development
 
 # Created by: Group Name
-List of group members: James Wells
+List of group members: Marco Marquez James Wells
